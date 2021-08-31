@@ -1,0 +1,71 @@
+#makes the list that will be used to hold people
+
+
+class city:
+    def __init__ (self, name, GDP, size, tech, strucher, population):
+        self.name=name
+        self.GDP=GDP
+        self.size=size
+        self.tech=tech
+        self.strucher=strucher
+        self.population=population
+    def printgdp(self):
+#Difines the city        
+            print(city.GDP)
+Realcity = city(input("what is the cities name?\n"),int(input("what is the cities GDP?\n")),input("what is the cities size?\n"),input("what is the cities tech?\n"),input("what is the cities strucher?\n"),int(input("what is the cities population?\n")))
+#this is the city the user will be building
+class citizen:
+    def __init__ (self, income, personallity, job, name):
+        self.income=income
+        self.personallity=personallity
+        self.job=job
+        self.name=name
+#the citizen class
+    def talk(self):
+            print("my income is "+ str(self.income))
+            print("I would discribe myself as "+self.personallity)
+            print("I work as a "+self.job)
+            print("My name is "+self.name)
+            print("I live in "+Realcity.name)
+   
+#prints info about the person
+def build_citizen(x):
+    if Realcity.strucher== "capitlism":
+        per= "Capitlist"
+    elif Realcity.strucher=="comunism":
+        per= "Communist"
+    elif Realcity.strucher=="fashism":
+        per="Fashist"
+    else:
+        per="Happy"
+    if Realcity.tech=="stone":
+        jo="hunter"
+    elif Realcity.tech=="bronze":
+        jo="farmer"
+    elif Realcity.tech=="iron":
+        jo="builder"
+    elif Realcity.tech=="steel":
+        jo="smith"
+    elif Realcity.tech=="coal":
+        jo="Factory worker"
+    elif Realcity.tech=="nuclear":
+        jo="scintist"
+    else:
+        jo="nothing"
+#this creates the person based on the cities inputs
+    x=citizen\
+       (round((((((Realcity.GDP/10.7)/(62000*Realcity.population))*(400*(1.068**(x*100/Realcity.population))-400+(800*(x*100/Realcity.population))))))*10),\
+        per,jo,"Moe")
+    return x
+num_cit=Realcity.population
+def build_a_few():
+    x=0
+    while x<num_cit:
+        var=build_citizen(x)
+        var.talk()
+
+        
+        x+=1
+build_a_few()
+
+
